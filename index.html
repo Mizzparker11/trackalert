@@ -192,7 +192,7 @@ var localHistory=JSON.parse(localStorage.getItem('crossingHistory')||'{}');
 
 // MAP
 var map=L.map('map',{zoomControl:true,attributionControl:false}).setView([32.9200,-97.3500],12);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19,subdomains:'abcd'}).addTo(map);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:19}).addTo(map);
 
 // ICONS
 function crossingIcon(status){
